@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 5000;
 const allowedOrigins = [
   "http://localhost:5173",
   "https://ashoka-b.vercel.app",
+  "https://ashoka-f.vercel.app",
 ];
 app.use(
   cors({
