@@ -13,11 +13,6 @@ const PORT = process.env.PORT || 5000;
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://budha-f.vercel.app",
-  "https://budha-f-main.vercel.app",
-  "https://budha-b-yyq9.vercel.app",
-  "http://127.0.0.1:5500",
-  "https://buddha-avenue-customer-f.vercel.app",
 ];
 app.use(
   cors({
