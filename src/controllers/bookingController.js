@@ -23,11 +23,7 @@ exports.createBooking = async (req, res) => {
     req.body.customerRef = customerRef;
 
     // 1. Create booking
-    console.log("Request body decoration charge:", req.body.decorationCharge);
-    console.log("Request body music charge:", req.body.musicCharge);
     const booking = await Booking.create(req.body);
-    console.log("Booking created:", booking);
-console.log("Menu",req.body.categorizedMenu)
     // 2. Handle categorizedMenu
     if (req.body.categorizedMenu) {
       const validCategories = Object.keys(Menu.schema.paths)
@@ -91,9 +87,7 @@ exports.getBookingById = async (req, res) => {
     // Fetch the associated menu
     const menu = await Menu.findOne({ bookingRef: req.params.id });
 
-    // Debug log
-    console.log("Booking:", booking);
-    console.log("Menu (categorizedMenu):", menu);
+
 
     res.status(200).json({
       ...booking.toObject(),
@@ -182,8 +176,6 @@ exports.updateBooking = async (req, res) => {
     }
 
     // 3. Update other fields
-    console.log("Update request decoration charge:", updatedData.decorationCharge);
-    console.log("Update request music charge:", updatedData.musicCharge);
     Object.assign(booking, updatedData);
 
     // --- STAFF MENU EDIT LIMIT LOGIC ---
