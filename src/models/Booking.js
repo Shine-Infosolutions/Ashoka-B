@@ -26,7 +26,7 @@ transactionId: {
   discount:{type:Number},
   hall:{
     type: String,
-    enum: ["Nirvana", "Mandala", "Conference","Lawn"], 
+    enum: ["Kitty Hall", "Banquet Hall", "Rooftop Hall","Flamingo Rooftop"], 
     default: "Nirvana",
   },
   extraRooms: { type: Number, default: 0 },
