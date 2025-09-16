@@ -24,10 +24,11 @@ transactionId: {
   trim: true
 },
   discount:{type:Number},
+  decorationCharge: { type: Number, default: 0 },
+  musicCharge: { type: Number, default: 0 },
   hall:{
     type: String,
     enum: ["Kitty Hall", "Banquet Hall", "Rooftop Hall","Flamingo Rooftop"], 
-    default: "Nirvana",
   },
   extraRooms: { type: Number, default: 0 },
 roomPricePerUnit: { type: Number, default: 0 },
